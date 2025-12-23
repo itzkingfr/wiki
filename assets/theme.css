@@ -1,0 +1,90 @@
+:root {
+  --accent: #7dd3fc;
+  --bg: #0f172a;
+  --panel: #020617;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --border: #1e293b;
+  --code: #020617;
+}
+
+/* Background */
+body {
+  background: radial-gradient(circle at top, #020617, var(--bg));
+  color: var(--text);
+}
+
+/* Sidebar */
+.sidebar {
+  background: linear-gradient(180deg, #020617, #020617);
+  border-right: 1px solid var(--border);
+}
+
+.sidebar a {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.sidebar a:hover {
+  color: var(--accent);
+}
+
+/* Active page */
+.sidebar .active > a {
+  color: var(--accent);
+}
+
+/* Main content */
+.markdown-section {
+  max-width: 900px;
+  padding: 3rem;
+}
+
+/* Headings */
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+/* Links */
+.markdown-section a {
+  color: var(--accent);
+}
+
+/* Code blocks */
+.markdown-section pre {
+  background: var(--code);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* Inline code */
+.markdown-section code {
+  background: var(--code);
+  border-radius: 6px;
+  padding: 0.2em 0.4em;
+}
+
+/* Search box */
+.search input {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 10px;
+}
+
+/* Scrollbar (Chrome) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
